@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Fun Facts about India</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Fun Fact about India</h1>
+        <p id="factDisplay">Click the button to see a fun fact!</p>
+        <button onclick="showRandomFact()">Show Fun Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "Chess originated in India during the Gupta Empire, known then as 'Chaturanga'.",
+            "India has the highest number of vegetarians in the world.",
+            "The concept of zero was first used in India.",
+            "India's film industry, Bollywood, produces the largest number of films annually in the world.",
+            "Yoga originated in India over 5,000 years ago.",
+            "India is the largest producer of spices in the world.",
+            "India is known for its many festivals, including Diwali, Holi, and Eid.",
+            "The Taj Mahal, one of the Seven Wonders of the World, is located in Agra, India.",
+            "India has one of the largest railway networks in the world.",
+            "India is incredibly diverse in languages, with 22 officially recognized languages.",
+            "Martial arts like Kalaripayattu originated in India.",
+            "The Kumbh Mela is one of the world's largest religious gatherings.",
+            "India is the largest producer of mangoes in the world.",
+            "India has the world's first floating post office in Dal Lake, Srinagar.",
+            "The concept of shampooing originated in India.",
+            "India's ISRO discovered water on the moon in 2009.",
+            "India is the world's largest democracy by the number of eligible voters.",
+            "Phoolan Devi, known as the 'Bandit Queen', was a famous bandit and later a Member of Parliament in India.",
+            "Indian cuisine is famous for its vigorous use of spices and herbs.",
+            "The national anthem of India, 'Jana Gana Mana', was written by Rabindranath Tagore."
+        ];
+
+        function showRandomFact() {
+            const factDisplay = document.getElementById('factDisplay');
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            factDisplay.textContent = facts[randomIndex];
+        }
+    </script>
+</body>
+</html>
